@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the classic Iris dataset prediction algorithm</h1>
+    </div>
+    <div class="featuers">
+        <h2>Features</h2>
+        <form action="#" method="post">
+            <p>Sepal length (cm): <input type="float" name="sl"></p>
+            <p>Sepal width (cm): <input type="float" name="sw"></p>
+            <p>Petal length (cm): <input type="float" name="pl"></p>
+            <p>Petal width (cm): <input type="float" name="pw"></p>
+            <p><input type="submit" value="Predict"></p>
+        </form>
+    </div>
+    <div class="prediction">
+        <h2>Prediction</h2>
+        <p>As per the details provided the predict species is: {{label}}</p>
+        <!-- <p>{{sl}},{{sw}},{{pl}},{{pw}}</p> -->
+    </div>
+</body>
+</html>
