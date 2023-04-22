@@ -42,7 +42,8 @@ npm run css
 ├── templates
 │   └── index.html
 └── webFunction.py
-
 ```
+## Screenshot
+![Image](./images/Screenshot%20from%202023-04-22%2015-55-08.png)
 ## Contributing
 Contributions are welcome! If you would like to contribute to this project, please fork the repository and create a new branch. Then, submit a pull request with your changes.
