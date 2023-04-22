@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,58 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/dist/output.css')}}">
     <title>Home</title>
 </head>
-<body>
-    <div class="text-blue-400">
-        <h1>Welcome to the classic Iris dataset prediction algorithm</h1>
+
+<body class="bg-gray-100">
+
+    <!-- Heading section -->
+    <div class="text-center py-10">
+        <h1 class="text-4xl font-bold text-blue-600">Welcome to the classic Iris dataset prediction algorithm</h1>
     </div>
-    <div class="featuers">
-        <h2>Features</h2>
-        <form action="#" method="post">
-            <p>Sepal length (cm): <input type="float" name="sl"></p>
-            <p>Sepal width (cm): <input type="float" name="sw"></p>
-            <p>Petal length (cm): <input type="float" name="pl"></p>
-            <p>Petal width (cm): <input type="float" name="pw"></p>
-            <p><input type="submit" value="Predict"></p>
-        </form>
-    </div>
-    <div class="prediction">
-        <h2>Prediction</h2>
-        <p>As per the details provided the predict species is: {{label}}</p>
-        <!-- <p>{{sl}},{{sw}},{{pl}},{{pw}}</p> -->
+
+    <!-- Features and prediction section -->
+    <div class="flex justify-center">
+
+        <!-- Features section -->
+        <div class="w-1/2 p-6">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">Features</h2>
+            <form action="#" method="post" class="bg-white p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="sl" class="block text-gray-700 font-bold mb-2">Sepal length (cm):</label>
+                    <input type="float" name="sl" id="sl"
+                        class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="sw" class="block text-gray-700 font-bold mb-2">Sepal width (cm):</label>
+                    <input type="float" name="sw" id="sw"
+                        class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="pl" class="block text-gray-700 font-bold mb-2">Petal length (cm):</label>
+                    <input type="float" name="pl" id="pl"
+                        class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="pw" class="block text-gray-700 font-bold mb-2">Petal width (cm):</label>
+                    <input type="float" name="pw" id="pw"
+                        class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Predict
+                    </button>
+                </div>
+            </form>
+            <h2>{{data}}</h2>
+        </div>
+
+        <!-- Prediction section -->
+        <div class="w-1/2 p-6">
+            <h2 class="text-2xl font-bold text-green-400 mb-4">Prediction</h2>
+            <p class="text-gray-700 mb-4">The predict species is: {{label}}</p>
+        </div>
+
     </div>
 </body>
+
 </html>
